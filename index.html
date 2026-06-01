@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping Cart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+      * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f7f9fc, #e9eef5);
+  padding: 24px 16px;
+  color: #111827;
+}
+
+body > h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+  letter-spacing: -0.03em;
+}
+
+body > div {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  font-size: 1rem;
+  outline: none;
+  background: #fff;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#addbtn {
+  background: #2563eb;
+  color: white;
+  margin-right: 8px;
+}
+
+#savebtn {
+  background: #10b981;
+  color: white;
+}
+
+#display {
+  margin-top: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+#display h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+#display button {
+  background: #ef4444;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+#totalcost {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+@media (min-width: 600px) {
+  body {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <h2>Shopping Cart</h2>
+    <div>
+    <input  type="text" id="productname"  placeholder="name of product...">
+    
+    <input  type="number" id="productprice" placeholder="price of product..." >
+    
+    <input  type="number" id="productquantity" placeholder="quantity of product...">
+    </div>
+    <button id="addbtn">add</button>
+    
+    <button id="savebtn">save</button>
+    
+    <div id="display"></div>
+    
+    <p id="totalcost"></p>
+    
+   <script src="cart.js" ></script>
+  </body>
+ </html>
